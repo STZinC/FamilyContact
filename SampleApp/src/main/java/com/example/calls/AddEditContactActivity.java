@@ -10,6 +10,7 @@
 package com.example.calls;
 
 import android.database.sqlite.SQLiteDatabase;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -23,6 +24,7 @@ public class AddEditContactActivity extends AppCompatActivity {
     private EditText editPhoneNumber;
     private EditText editRelationship;
     private MyDataBaseHelper dbHelper;
+
     Integer id;
 
     @Override
@@ -64,9 +66,10 @@ public class AddEditContactActivity extends AppCompatActivity {
         String PhoneNumber = editPhoneNumber.getText().toString();
         String RelationShip = editRelationship.getText().toString();
         db.execSQL("insert into People (name, phoneNumber1, relationship) values(?,?,?)",
-                new String[] {Name,PhoneNumber,RelationShip});
+                new String[] {Name, PhoneNumber, RelationShip});
 
     }
+
 
 
 }

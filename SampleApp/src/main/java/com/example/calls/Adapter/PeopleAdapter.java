@@ -45,6 +45,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
             peopleAvator = (ImageView) view.findViewById(R.id.people_avatar);
             peopleName = (TextView) view.findViewById(R.id.people_name);
             peoplePhoneNumber = (TextView) view.findViewById(R.id.people_phonenumber);
+
         }
     }
 
@@ -85,6 +86,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
         holder.peopleName.setText(people.getName());
         holder.peoplePhoneNumber.setText(people.getPhoneNumber());
         holder.peopleAvator.setImageResource(R.drawable.avatar_boy);
+
     }
 
     @Override

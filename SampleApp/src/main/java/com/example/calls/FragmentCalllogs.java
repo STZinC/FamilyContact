@@ -44,7 +44,7 @@ public class FragmentCalllogs extends Fragment {
     private RecyclerView logListView;
     private LogsAdapter adapter;
     private Runnable logsRunnable;
-    private String[] requiredPermissions = {Manifest.permission.READ_CALL_LOG, Manifest.permission.READ_CONTACTS,Manifest.permission.CALL_PHONE};
+    private String[] requiredPermissions = {Manifest.permission.READ_CALL_LOG, Manifest.permission.READ_CONTACTS, Manifest.permission.CALL_PHONE};
     private View view;
     private static final String TAG = "FragmentCalllogs";
 

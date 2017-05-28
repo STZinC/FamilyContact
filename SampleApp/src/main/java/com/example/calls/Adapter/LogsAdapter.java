@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.calls.ContactDetailActivity;
 import com.example.calls.R;
 import com.wickerlabs.logmanager.LogObject;
 import com.wickerlabs.logmanager.LogsManager;
@@ -100,6 +101,10 @@ public class LogsAdapter extends RecyclerView.Adapter<LogsAdapter.ViewHolder> {
                 int position = holder.getAdapterPosition();
                 Toast.makeText(context, logs.get(position).getContactName(),
                         Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(),ContactDetailActivity.class);
+                String phoneNum= "TEL:"+logs.get(position).getNumber();
+                intent.putExtra("index",phoneNum);
+                context.startActivity(intent);
             }
         });
         return holder;
