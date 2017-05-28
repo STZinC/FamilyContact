@@ -338,7 +338,7 @@ public class ContactDetailActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                     return;
                 }
-                sweetMessage+= weatherMessage;
+                sweetMessage+= ","+weatherMessage;
                 Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"+phoneNum));
                 intent.putExtra("sms_body", sweetMessage);
                 startActivity(intent);
